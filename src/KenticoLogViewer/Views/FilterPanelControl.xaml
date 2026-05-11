@@ -1,0 +1,69 @@
+<UserControl x:Class="KenticoLogViewer.Views.FilterPanelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8">
+            <TextBlock Text="Advanced filters" FontWeight="Bold" FontSize="13" Margin="0,0,0,10"/>
+
+            <!-- EventType -->
+            <TextBlock Text="Type" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <CheckBox Content="Error (E)" IsChecked="{Binding FilterTypeE}" Margin="0,0,8,0"/>
+                <CheckBox Content="Warning (W)" IsChecked="{Binding FilterTypeW}" Margin="0,0,8,0"/>
+                <CheckBox Content="Info (I)" IsChecked="{Binding FilterTypeI}"/>
+            </StackPanel>
+
+            <!-- EventID range -->
+            <TextBlock Text="EventID — Min" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventIdMinFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+            <TextBlock Text="EventID — Max" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventIdMaxFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
+
+            <!-- DateFrom / DateTo -->
+            <TextBlock Text="Date — From" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <DatePicker SelectedDate="{Binding DateFrom}" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding DateFromTimeStr, UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="Start time (HH:mm:ss)" Margin="0,0,0,6"/>
+            <TextBlock Text="Date — To" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <DatePicker SelectedDate="{Binding DateTo}" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding DateToTimeStr, UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="End time (HH:mm:ss)" Margin="0,0,0,8"/>
+
+            <!-- Visible columns -->
+            <TextBlock Text="Source" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding SourceFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventCode" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventCodeFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventDescription" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventDescriptionFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+            <Separator Margin="0,0,0,10"/>
+            <TextBlock Text="Hidden columns" FontWeight="Bold" Margin="0,0,0,8"/>
+
+            <TextBlock Text="UserName" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding UserNameFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="IP Address" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding IpAddressFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventUrl" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventUrlFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventMachineName" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventMachineNameFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventUserAgent" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventUserAgentFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"/>
+
+            <TextBlock Text="EventUrlReferrer" FontWeight="SemiBold" Margin="0,0,0,2"/>
+            <TextBox Text="{Binding EventUrlReferrerFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                <Button Content="Reset filters"
+                    Command="{Binding ResetCommand}"
+                    HorizontalAlignment="Stretch" Padding="6,5"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

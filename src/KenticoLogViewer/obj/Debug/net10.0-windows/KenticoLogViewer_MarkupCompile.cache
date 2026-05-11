@@ -1,5 +1,5 @@
 ﻿KenticoLogViewer
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_O
 D:\Kentico-Log-Viewer\src\KenticoLogViewer\App.xaml
 41750672663
 
-221820220796
+24-487807467
 226-1984680016
 Views\ConnectionManagerWindow.xaml;Views\FilterPanelControl.xaml;Views\LogDetailWindow.xaml;Views\MainWindow.xaml;
 
-False
+True
 

@@ -51,7 +51,7 @@ namespace KenticoLogViewer.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KenticoLogViewer;component/views/logdetailwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KenticoLogViewer;V1.0.0.0;component/views/logdetailwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\LogDetailWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

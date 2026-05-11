@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KenticoLogViewer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a69bb4e49c1380b30a9b53ca30255d6576ea084d")]
 [assembly: System.Reflection.AssemblyProductAttribute("KenticoLogViewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KenticoLogViewer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
